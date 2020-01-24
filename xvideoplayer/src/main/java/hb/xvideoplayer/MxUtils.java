@@ -111,13 +111,13 @@ class MxUtils {
     }
 
     static void setWindowBrightness(Activity activity, float brightness) {
-        WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
-        lp.screenBrightness = brightness / 255.0f;
-        if (lp.screenBrightness > 1) {
-            lp.screenBrightness = 1;
-        } else if (lp.screenBrightness < 0.1) {
-            lp.screenBrightness = (float) 0.1;
-        }
-        activity.getWindow().setAttributes(lp);
+        //WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
+        //lp.screenBrightness = brightness / 255.0f;
+        //if (lp.screenBrightness > 1) {
+        //    lp.screenBrightness = 1;
+        //} else if (lp.screenBrightness < 0.1) {
+        //    lp.screenBrightness = (float) 0.1;
+        //}
+        //activity.getWindow().setAttributes(lp);
     }
 }
