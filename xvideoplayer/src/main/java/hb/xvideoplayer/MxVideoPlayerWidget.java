@@ -497,25 +497,25 @@ public class MxVideoPlayerWidget extends MxVideoPlayer {
     }
 
     private void showWifiDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setMessage(getResources().getString(R.string.tips_not_wifi));
-        builder.setPositiveButton(getResources().getString(R.string.tips_not_wifi_confirm),
-                new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
+        //AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        //builder.setMessage(getResources().getString(R.string.tips_not_wifi));
+        //builder.setPositiveButton(getResources().getString(R.string.tips_not_wifi_confirm),
+                //new DialogInterface.OnClickListener() {
+            //@Override
+            //public void onClick(DialogInterface dialog, int which) {
+                //dialog.dismiss();
                 preparePlayVideo();
                 WIFI_TIP_DIALOG_SHOWED = true;
-            }
-        });
-        builder.setNegativeButton(getResources().getString(R.string.tips_not_wifi_cancel),
-                new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        builder.create().show();
+           // }
+        //});
+        //builder.setNegativeButton(getResources().getString(R.string.tips_not_wifi_cancel),
+            //    new DialogInterface.OnClickListener() {
+           // @Override
+           // public void onClick(DialogInterface dialog, int which) {
+           //     dialog.dismiss();
+           // }
+        //});
+        //builder.create().show();
     }
 
     @Override
