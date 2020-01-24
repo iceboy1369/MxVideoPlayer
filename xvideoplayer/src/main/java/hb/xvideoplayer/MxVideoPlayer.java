@@ -306,8 +306,8 @@ public abstract class MxVideoPlayer extends FrameLayout implements MxMediaPlayer
                                         mGestureDownVolume = mAudioManager.
                                                 getStreamVolume(AudioManager.STREAM_MUSIC);
                                     } else {  // adjust the light
-                                        mChangeLight = true;
-                                        mGestureDownBrightness = MxUtils.getScreenBrightness((Activity) getContext());
+                                        //mChangeLight = true;
+                                       // mGestureDownBrightness = MxUtils.getScreenBrightness((Activity) getContext());
                                     }
                                 }
                             }
@@ -332,15 +332,15 @@ public abstract class MxVideoPlayer extends FrameLayout implements MxMediaPlayer
                         showVolumeDialog(-deltaY, volumePercent);
                     }
                     if (mChangeLight) {
-                        deltaY = -deltaY;  // up is -, down is +
-                        int deltaV = (int) (255 * deltaY * 3 / mScreenHeight);
-                        MxUtils.setScreenManualMode(getContext());
-                        int brightnessValue = mGestureDownBrightness + deltaV;
-                        if (brightnessValue >= 0 && brightnessValue <= 255) {
-                            MxUtils.setWindowBrightness((Activity) getContext(), brightnessValue);
-                        }
-                        int brightnessPercent = (int) (mGestureDownBrightness + deltaY * 255  * 3 / mScreenHeight);
-                        showBrightnessDialog(-deltaY, brightnessPercent);
+                        //deltaY = -deltaY;  // up is -, down is +
+                        //int deltaV = (int) (255 * deltaY * 3 / mScreenHeight);
+                        //MxUtils.setScreenManualMode(getContext());
+                        //int brightnessValue = mGestureDownBrightness + deltaV;
+                        //if (brightnessValue >= 0 && brightnessValue <= 255) {
+                        //    MxUtils.setWindowBrightness((Activity) getContext(), brightnessValue);
+                        //}
+                        //int brightnessPercent = (int) (mGestureDownBrightness + deltaY * 255  * 3 / mScreenHeight);
+                        //showBrightnessDialog(-deltaY, brightnessPercent);
                     }
                     break;
                 case MotionEvent.ACTION_UP:
